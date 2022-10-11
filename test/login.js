@@ -1,12 +1,13 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const login = async () =>{
 const tokenResponse = await fetch('https://dev.stedi.me/login',{
   method: 'POST',
   body:JSON.stringify({
-    userName: "hello@gmail.com",
-    password:"P@$$word"})
+    userName: "scmurdock@gmail.com",
+    password:"P@ssw0rd"})
 })
+return tokenResponse;
 };
 
-export {login};
+export default login;
